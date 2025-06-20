@@ -1,7 +1,7 @@
 ### Instructions
 NOTE: This script only works on MacOS.
 1. Run the Python script from the Terminal with the command "python3 AE_Mask_To_PP.py".
-![](img/step1.png)
+![](Instructions/img/step1.png)
 
 2. In After Effects, select a keyframed mask and run Mask_To_JSON.jsx from File > Scripts > Run Script File. Copy the contents of the resulting text box to the clipboard.
 ![](img/step2a.png)
