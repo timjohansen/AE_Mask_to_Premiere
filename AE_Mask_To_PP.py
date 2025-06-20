@@ -354,6 +354,7 @@ def replace_clipboard(keyframe_data: str,
 
 def premiere_button_clicked():
     global premiere_status
+    global premiere_status_label
     global premiere_ID
     global premiere_clipboard_data
     global premiere_in_point
@@ -362,6 +363,7 @@ def premiere_button_clicked():
         return
     premiere_clipboard_data, premiere_ID, premiere_in_point, clip_name = data
     premiere_status.set("Video Clip:\n" + clip_name)
+    premiere_status_label.config(state="enabled")
     check_if_ready()
 
 
@@ -375,10 +377,12 @@ def check_if_ready():
 def ae_button_clicked():
     global ae_clipboard_data
     global ae_status
+    global ae_status_label
     data = paste_from_ae()
     if data is not None:
         ae_clipboard_data = data
         ae_status.set("Keyframes: " + str(len(ae_clipboard_data)))
+        ae_status_label.config(state="enabled")
         check_if_ready()
 
 
@@ -413,7 +417,7 @@ premiere_paste_button.grid(column=0, row=0)
 
 premiere_instructions = ttk.Label(premiere_paste_frame, padding=5, text="Copy a timeline clip from Premiere\n"
                                                                         "with a keyframed mask on it")
-premiere_instructions.configure(justify="center")
+premiere_instructions.configure(justify="center", state="disabled")
 premiere_instructions.grid(column=0, row=1)
 
 premiere_status = tkinter.StringVar()
@@ -443,7 +447,7 @@ process_frame.grid(column=0, row=1, sticky=(N,W,E,S))
 
 process_button = ttk.Button(main_frame, text="Not Ready", command=convert_button_clicked)
 process_button.grid(column=0, row=3, sticky=(N,W,E,S))
-process_button.config(state=tkinter.DISABLED)
+process_button.config(state="disabled")
 
 
 window.mainloop()

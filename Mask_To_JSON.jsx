@@ -21,7 +21,7 @@ function copyToClipboard(string) {
 }
 
 function buildUI(thisObj, textToDisplay) {
-	var win = (thisObj instanceof Panel)? thisObj : new Window('dialog', "Results", undefined, {resizable:true});
+	var win = (thisObj instanceof Panel)? thisObj : new Window('dialog', "Results (Copy This Text)", undefined, {resizable:true});
 		win.spacing = 0;
 		win.margins = 4;
 		var mainGroup = win.add ("group");
@@ -36,8 +36,8 @@ function buildUI(thisObj, textToDisplay) {
 			
 			var buttonGroup = win.add("group");
 			buttonGroup.orientation = "row";
-			var copyButton = buttonGroup.add("button", undefined, "Copy To Clipboard");
-			copyButton.onClick = function () {copyToClipboard(textToDisplay);}
+//			var copyButton = buttonGroup.add("button", undefined, "Copy To Clipboard");
+//			copyButton.onClick = function () {copyToClipboard(textToDisplay);}
 			var closeButton = buttonGroup.add("button", undefined, "Close", {name:"cancel"});		
 
 	win.layout.layout(true);
