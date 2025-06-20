@@ -3,7 +3,7 @@
 This mask makes it possible to bring an animated mask from Adobe After Effects to Adobe Premiere by injecting a mask into Premiere clipboard data.
 
 # Usage
-[Detailed instructions are available here](Instructions/Instructions.MD)
+[Detailed instructions are available here](Instructions/README)
 
 This script currently only works on MacOS, unfortunately. Premiere on Windows seems less willing to modified clipboard data, and I don't have the deep knowledge of Windows' inner workings to find a workaround. If someone out there knows a way to do it, please get in touch.  
 
