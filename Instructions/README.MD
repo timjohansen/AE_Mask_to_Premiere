@@ -4,8 +4,8 @@ NOTE: This script only works on MacOS.
 ![](img/Step1.png)
 
 2. In After Effects, select a keyframed mask and run Mask_To_JSON.jsx from File > Scripts > Run Script File. Copy the contents of the resulting text box to the clipboard.
-![](img/Step2a.png)
-![](img/Step2b.png)
+![](img/Step2A.png)
+![](img/Step2A.png)
 
 3. Click "Paste From After Effects" in the Python window. If all went well, you'll see how many keyframes are in the mask.
 ![](img/Step3.png)
